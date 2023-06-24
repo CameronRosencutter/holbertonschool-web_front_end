@@ -1,0 +1,7 @@
+/* Task 1: Scrolling is fluid
+Description: This will make the scrolling smooth and clean.
+*/
+
+html {
+    scroll-behavior: smooth;
+}
