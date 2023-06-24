@@ -19,6 +19,7 @@ html {
 
 body {
     color: #161616;
+    font-family: var(--font-family-base);
 }
 
 a {
