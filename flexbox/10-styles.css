@@ -532,8 +532,11 @@ ul.row {
     ============================= */
 
 .section-hero {
+  color: white;
+  text-transform: uppercase;
   position: relative;
   margin-top: -8.5rem;
+  padding: 10rem 4rem;
 }
 
 .hero-homepage {
