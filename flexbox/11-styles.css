@@ -720,7 +720,7 @@ ul.row {
 }
 
 .hero-article:before {
-  content: 0;
+  content: '';
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 0;
@@ -738,5 +738,6 @@ ul.row {
 
 .hero-article .section-body {
   position: relative;
-  padding: 7rem ;
+  padding: 7rem;
+  z-index: 2;
 }
