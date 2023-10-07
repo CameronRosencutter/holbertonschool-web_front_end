@@ -532,10 +532,16 @@ ul.row {
     ============================= */
 
 .section-hero {
+  position: relative;
+  margin-top: -8.5rem;
+}
+
+.hero-homepage {
   background-position: 75% 0;
   background-repeat: no-repeat;
   background-size: 90rem auto;
   background-color: #010101;
+
 }
 
 .section-hero .section-title {
