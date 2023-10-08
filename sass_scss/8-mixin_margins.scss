@@ -1,0 +1,12 @@
+@mixin margin-center($left, $right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+body {
+    @include margin-center(10px, 10px);
+}
+  
+  div {
+    @include margin-center(15px, 15px);
+}
