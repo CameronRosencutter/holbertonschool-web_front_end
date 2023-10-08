@@ -1,0 +1,11 @@
+.info, .warning, .success {
+  font-size: 12px;
+}
+
+.success {
+  color: #00ff00;
+}
+
+.warning {
+  color: #ff0000;
+}/*# sourceMappingURL=9-extend_list.css.map */
