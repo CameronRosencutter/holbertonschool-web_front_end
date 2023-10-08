@@ -1,0 +1,9 @@
+$mypink: rgb(241, 201, 208);
+$myred: rgba(218, 9, 9, 0.787);
+$myblue: rgb(61, 153, 223);
+
+body {
+    background-color: $myred;
+    border: 10px solid $myblue;
+    color: $mypink;
+}
