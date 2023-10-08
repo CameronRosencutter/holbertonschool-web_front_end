@@ -1,6 +1,6 @@
 body {
   color: #3D3D3D;
 }
-body body > .red {
+body .red:nth-child(1) {
   color: #FF0000;
 }
