@@ -9,3 +9,8 @@ function welcome(firstName, lastName) {
 
   displayFullName();
 }
+
+var displayFullName = {
+  firstName: "Cameron",
+  lastName: "Rosencutter"
+};
