@@ -9,7 +9,7 @@ function createClassRoom(numberofstudents) {
 
   var students = [];
 
-  for (var i = 0; i < numbersofstudents; i++) {
+  for (var i = 0; i < numberofstudents; i++) {
     students[i] = studentSeat(i + 1);
   }
 
