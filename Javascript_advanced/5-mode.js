@@ -10,4 +10,22 @@ function main() {
     let spooky = changeMode(9, 'bold', 'uppercase', 'pink', 'green');
     let darkMode = changeMode(12, 'bold', 'capitalize', 'black', 'white');
     let screamMode = changeMode(12, 'normal', 'lowercase', 'white', 'black');
+    let p = document.createElement('p');
+    let text = document.createTextNode('Welcome Holberton!');
+    p.appendChild(text);
+    document.body.appendChild(p);
+
+    function createBtn(btnName, id, mode) {
+        let btn = document.createElement('button');
+        btn.innerHTML = btnName;
+        btn.id = id;
+        document.body.appendChild(btn);
+        document.getElementById(id).onclick = mode;
+    }
+    createBtn('Spooky', 'spookyId', spooky);
+    createBtn('Dark Mode', 'darkModeId', darkMode);
+    createBtn('Scream Mode', 'screamModeId', screamMode);
+
 }
+
+main();
