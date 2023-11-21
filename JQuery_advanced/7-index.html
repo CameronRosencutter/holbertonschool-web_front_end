@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <title>Task 0</title>
+
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            $(document).ready(function () {
+                function createSearchForm() {
+                    $('body').append(`<input type="text">
+                                    <input type="submit">
+                                    <ul></ul>`);
+    
+                    $('input[type="submit"]').click(function () {
+                        queryWikipedia($('input[type="text"]').val());
+                    });
+    
+                }
+    
+                function addNewArticle(id, title, snippet) {
+                    $('ul').append(`<li></li>`);
+                    $('li').last().append(`<p>
+                                            <span>${id}</span> -
+                                            <b>${title}</b>
+                                        </p>`);
+                    $('li').last().append(`<p>${snippet}</p>`);
+                }
+    
+                function queryWikipedia(search) {
+                    $.ajax({
+                        type: 'GET',
+                        url: `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${search}&format=json`,
+                        dataType: 'jsonp',
+                        success: function (data) {
+                            for (let i = 0; i < data.query.search.length; i++) {
+                                addNewArticle(data.query.search[i].pageid, data.query.search[i].title, data
+                                    .query.search[i].snippet);
+                            }
+                        }
+                    });
+                }
+                createSearchForm();
+            });
+        </script>
+    </body>
+
+</html>

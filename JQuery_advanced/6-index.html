@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <title>Task 0</title>
+
+    </head>
+
+    <body>
+        <script type="application/javascript">
+            $(document).ready(function () {
+                createFamilyTree();
+                createForm();
+            });
+    
+            function createFamilyTree() {
+                $('body').append(`<table><thead><tr><th>Firstname</th><th>Lastname</th></tr></thread><tbody></tbody></table>`);
+            };
+    
+            function addNewMember(firstName, lastName) {
+                if (position == 'before') {
+                    $('tbody').prepend(`<tr><td>${firstName}</td><td>${lastName}</td><td>(x)</td></tr>`);
+                } else {
+                    $('tbody').append(`<tr><td>${firstName}</td><td>${lastName}</td><td>(x)</td></tr>`);
+                }
+    
+                $('td:nth-child(3)')
+                    .css('background-color', 'orange')
+                    .click(function (e) {
+                        $(this).closest('tr').remove();
+                    });
+            };
+    
+            function createForm() {
+                $('table').before(`<form>
+                                        <input type="text">
+                                        <input type="text">
+                                        <select>
+                                            <option value="before">Before</option>
+                                            <option value="after">After</option>
+                                        </select>
+                                        <input type="button" id="submit" value="Submit">
+                                    </form>`);
+    
+                $('#submit').click(function () {
+                    addNewMember($('input:first').val(),
+                        $('input:nth-of-type(2)').val(),
+                        $('select').find(":selected").text().toLowerCase());
+                });
+            };
+    
+        </script>
+    </body>
+
+</html>
