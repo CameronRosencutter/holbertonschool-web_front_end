@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <title>1-index</title>
+        <script type="text/javascript" src="src/index.js"></script>
+
+    </head>
+
+    <body>
+
+        <script>document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";</script>
+        
+        <form action="/action_page.php">
+            <h1>Login to the Website</h1>
+            <label for="fname">First name:</label>
+            <input type="text" id="firstname" name="fname">
+            <label for="lname">Email</label>
+            <input type="text" id="email" name="mail">
+            <input id="logmein" type="button" value="Log me in" onclick="setCookies()"/>
+            <h1>Cookies</h1>
+            <input id="logmein" type="button" value="Show the cookies" onclick="showCookies()"/>
+          </form>
+
+
+
+    </body>
+
+</html>
