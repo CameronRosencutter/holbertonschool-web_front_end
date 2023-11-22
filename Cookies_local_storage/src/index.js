@@ -7,3 +7,15 @@ function setCookies () {
 
       alert('Welcome ' + firstname + ', have some cookies!');
 }
+
+function showCookies() {
+    const paragraph = document.createElement('p');
+  
+    const cookieValue = document.cookie;
+  
+    paragraph.innerHTML = `${cookieValue}`;
+  
+    document.body.appendChild(paragraph);
+
+    alert ('Cookies Aquired!')
+  }

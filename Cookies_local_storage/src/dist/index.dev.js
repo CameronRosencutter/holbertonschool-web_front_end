@@ -7,3 +7,11 @@ function setCookies() {
   document.cookie = 'email=' + encodeURIComponent(email);
   alert('Welcome ' + firstname + ', have some cookies!');
 }
+
+function showCookies() {
+  var paragraph = document.createElement('p');
+  var cookieValue = document.cookie;
+  paragraph.innerHTML = "".concat(cookieValue);
+  document.body.appendChild(paragraph);
+  alert('Cookies Aquired!');
+}
